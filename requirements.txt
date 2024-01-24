@@ -1,0 +1,4 @@
+beautifulsoup4==4.12.3
+gspread==5.12.4
+html5lib==1.1
+requests==2.31.0

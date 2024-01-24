@@ -1,0 +1,16 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: cnn-chart-extract
+  namespace: python-functions
+spec:
+  schedule: "* 12 * * *"
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: cnn-chart-extract
+            image: rssnyder/cnn-chart-extract:latest
+            imagePullPolicy: IfNotPresent
+          restartPolicy: Never
